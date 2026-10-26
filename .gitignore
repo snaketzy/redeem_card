@@ -2,18 +2,17 @@
 
 # dependencies
 /node_modules
+/apps/*/node_modules
 /.pnp
 .pnp.js
 
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
 /build
+/dist
+/apps/*/dist
 
 # misc
 .DS_Store
@@ -28,9 +27,8 @@ yarn-error.log*
 .env*.local
 .env
 
-# vercel
-.vercel
+# vite
+.vite
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts

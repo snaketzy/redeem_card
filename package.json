@@ -1,0 +1,23 @@
+{
+  "name": "redeem-card",
+  "version": "0.1.0",
+  "private": true,
+  "description": "供各项目共享的点卡（Redeem Card）生成与核销系统",
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm run dev --workspace @redeem-card/server",
+    "dev:web": "npm run dev --workspace @redeem-card/web",
+    "build": "npm run build --workspace @redeem-card/web",
+    "start": "npm run start --workspace @redeem-card/server",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
